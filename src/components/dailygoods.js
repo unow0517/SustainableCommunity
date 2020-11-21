@@ -1,6 +1,10 @@
+import jigutitle from './image/goods/jigu/jigutitle.png'
+
 const Dailygoods = () => {
     return(
-        <h1>생활용품</h1>
+        <div className='mainbody'>
+            <img src={jigutitle} alt='jigu'/>
+        </div>
     )
 }
 

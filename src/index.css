@@ -27,6 +27,16 @@
 body{
     background-color: var(--lightblue);
 }
+.mainbody{
+    margin-left: 140px;
+    display:flex;
+}
+
+.mainbody img{
+    width:150px;
+    margin:30px;
+}
+
 .title{
     margin-left: 140px;
 }
@@ -36,7 +46,7 @@ body{
     background: var(--darkred);
     width: 130px;
     position: fixed;
-    top: var(--medium-margin);
+    top: calc(2*var(--medium-margin));
     left: var(--small-margin);
 }
 
