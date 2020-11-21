@@ -1,6 +1,11 @@
+import greenblisstitle from './image/textile/greenbliss/greenblisstitle.png'
+
+
 const Textile = () => {
     return(
-        <h1>섬유</h1>
+        <div className='mainbody'>
+            <img src={greenblisstitle} alt='greenbliss'/>
+        </div>
     )
 }
 
