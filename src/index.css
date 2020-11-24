@@ -27,27 +27,33 @@
 body{
     background-color: var(--lightblue);
 }
+
 .mainbody{
-    margin-left: 140px;
+    margin: auto;
     display:flex;
 }
 
-.mainbody img{
+.mainbody .symbol{
     width:150px;
     margin:30px;
 }
 
-.title{
-    margin-left: 140px;
-}
 .sidebar{
     display:flex;
     flex-direction: column;
     background: var(--darkred);
-    width: 130px;
+    width: 200px;
     position: fixed;
     top: calc(2*var(--medium-margin));
     left: var(--small-margin);
+}
+
+
+.app{
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    background-color: rgb(32, 146, 70);
 }
 
 .sidebar li{
@@ -59,3 +65,47 @@ body{
     margin-left:  140px;
     background-color:  var(--blue);
 }
+
+.active{
+    background-color: rgb(255, 237, 204);
+}
+
+/*Cafe Inside!*/
+.thepicker .head{
+    margin:auto;
+    width:100%;
+    display:flex;
+    align-items: center;
+    background-color: var(--lightread);
+}
+
+.thepicker .title {
+    height:200px;
+}
+
+.thepicker .head .icons{
+    margin-right: 0;
+    font-size: 25px;
+    padding: 30px;
+}
+
+.thepicker .head .icon{
+    margin-right: 0;
+    font-size: 25px;
+    padding: 30px;
+}
+
+.thepicker .picture {
+    width: 700px;
+}
+
+
+
+
+.thepicker .icon:hover{
+    background-color: yellowgreen;
+}
+/*
+@media screen and (max-width: 768px){
+
+} */

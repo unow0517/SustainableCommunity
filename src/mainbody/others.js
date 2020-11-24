@@ -1,9 +1,10 @@
-import superbintitle from './image/others/superbin/superbintitle.png'
-import zerodesigntitle from './image/others/zerodesign/zerodesigntitle.png'
+import React from 'react';
+import superbintitle from './others/image/superbin/superbintitle.png'
+import zerodesigntitle from './others/image/zerodesign/zerodesigntitle.png'
 
 const Others = () => {
     return(
-        <div className='mainbody'>
+        <div>
             <img src={superbintitle} alt='superbin'/>
             <img src={zerodesigntitle} alt='superbin'/>
         </div>  

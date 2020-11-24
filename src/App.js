@@ -1,17 +1,22 @@
-import React from 'react';
-import {Route} from 'react-router-dom'
-import Home from './components/home';
-import Sidebar from './components/sidebar';
+import React,{useState} from 'react';
+import Title from './Layout/title';
+import MainBody from './Layout/mainbody';
+import Sidebar from './Layout/sidebar';
+
 
 const App = () => {
+  const [cafeHome, setCafeHome] = useState(false);
+  const toCafeHome = () => {
+    setCafeHome(true);
+  }
+  const exitCafeHome = () => {
+    setCafeHome(false)
+  }
   return (
-    <div>
-      <h1 className = 'title'>지속가능한 커뮤니티입니다</h1>
-      <Sidebar/>
-      <div className='main'>
-        <a href='/'>Home</a>
-        <Route exact path='/'><Home/></Route>
-      </div>
+    <div className='app'>
+      <Title/>
+      <Sidebar _toCafeHome = {toCafeHome} _exitCafeHome={exitCafeHome} />
+      <MainBody _cafeHome = {cafeHome} _exitCafeHome={exitCafeHome} />
     </div>
   );
 }

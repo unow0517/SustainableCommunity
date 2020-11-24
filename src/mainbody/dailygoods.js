@@ -1,8 +1,8 @@
-import jigutitle from './image/goods/jigu/jigutitle.png'
+import jigutitle from './dailygoods/image/jigu/jigutitle.png'
 
 const Dailygoods = () => {
     return(
-        <div className='mainbody'>
+        <div>
             <img src={jigutitle} alt='jigu'/>
         </div>
     )

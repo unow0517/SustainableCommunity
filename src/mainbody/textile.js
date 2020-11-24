@@ -1,9 +1,9 @@
-import greenblisstitle from './image/textile/greenbliss/greenblisstitle.png'
+import greenblisstitle from './textile/image/greenbliss/greenblisstitle.png'
 
 
 const Textile = () => {
     return(
-        <div className='mainbody'>
+        <div>
             <img src={greenblisstitle} alt='greenbliss'/>
         </div>
     )
