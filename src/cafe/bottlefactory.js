@@ -13,9 +13,9 @@ const BottleFactory = () => {
             <section className='head'>
                 <img src={title} alt='thepickermain' className='title'/>
                 <section className='icons'>
-                    <a href='https://thepicker.net/' target='_blank' rel='noreferrer'>
+                    <a href='https://bottlefactory.co.kr/' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faHome} className='icon'/></a>
-                    <a href='https://www.instagram.com/thepicker/?hl=ko' target='_blank' rel='noreferrer'>
+                    <a href='https://www.instagram.com/bottle_factory/?hl=ko' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faInstagram} className='icon'/></a>
                 </section>
             </section>
@@ -51,7 +51,6 @@ const BottleFactory = () => {
                 <img src={pic1} alt='image1' className = 'picture'/>
                 <img src={pic2} alt='image2' className = 'picture'/>
             </section>
-
         </div>
     );
 };

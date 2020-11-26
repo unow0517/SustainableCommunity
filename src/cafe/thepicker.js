@@ -38,8 +38,8 @@ const ThePicker = () => {
                     국내 제로 웨이스트 1호 매장 '더피커' 대표 인터뷰 [우리의 환경은 평등합니까]_세계일보</a></p>
                 <p><a href='https://brunch.co.kr/@thefirstmedia/110' target="_blank" rel = 'noreferrer'> 더 피커,
                     쓰레기는 두고 가세요_브런치</a></p>
-                <p><a href='https://www.youtube.com/watch?v=QHw9JDS8iS4' target="_blank" rel = 'noreferrer'> [안쓰고 산다] 
-                    포장이 없는 잡화점, '제로웨이스트숍 더피커' 편. 환경부 유튜브</a></p><br/><br/>
+                <p><a href='https://www.youtube.com/watch?v=QHw9JDS8iS4' target="_blank" rel = 'noreferrer'> 
+                [안쓰고 산다] 포장이 없는 잡화점, '제로웨이스트숍 더피커' 편. 환경부 유튜브</a></p><br/><br/>
             </section>     
             <section>
                 <img src={pic1} alt='image1' className = 'picture'/>

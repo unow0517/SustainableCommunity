@@ -115,7 +115,8 @@ body{
 }
 
 .cafeinside .picture {
-    width: 700px;
+    height: 500px;
+    margin-right: 5px;
 }
 
 
