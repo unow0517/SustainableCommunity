@@ -42,10 +42,11 @@ body{
     display:flex;
     flex-direction: column;
     background: var(--darkred);
-    width: 200px;
+    width: 50px;
     position: fixed;
     top: calc(2*var(--medium-margin));
     left: var(--small-margin);
+    opacity: 30%;
 }
 
 
@@ -70,8 +71,26 @@ body{
     background-color: rgb(255, 237, 204);
 }
 
+.location{
+    text-align: left;
+    background-color: rgba(183, 255, 174, 0.63);
+}
+
+/* Cafe Home */
+
+.fullcafe {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.cafehome .icon{
+    width:150px;
+    padding: 0 var(--large-padding);
+    
+}
 /*Cafe Inside!*/
-.thepicker .head{
+.cafeinside .head{
     margin:auto;
     width:100%;
     display:flex;
@@ -79,23 +98,23 @@ body{
     background-color: var(--lightread);
 }
 
-.thepicker .title {
+.cafeinside .title {
     height:200px;
 }
 
-.thepicker .head .icons{
+.cafeinside .head .icons{
     margin-right: 0;
     font-size: 25px;
     padding: 30px;
 }
 
-.thepicker .head .icon{
+.cafeinside .head .icon{
     margin-right: 0;
     font-size: 25px;
     padding: 30px;
 }
 
-.thepicker .picture {
+.cafeinside .picture {
     width: 700px;
 }
 
