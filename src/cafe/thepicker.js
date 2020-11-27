@@ -1,8 +1,8 @@
 import React from 'react';
-import title from "../image/thepicker/thepickertitle.png";
-import pic1 from "../image/thepicker/image1.jpg";
-import pic2 from "../image/thepicker/image2.jpg";
-import pic3 from "../image/thepicker/image3.jpg";
+import title from "../image/cafe/thepicker/thepickertitle.png";
+import pic1 from "../image/cafe/thepicker/image1.jpg";
+import pic2 from "../image/cafe/thepicker/image2.jpg";
+import pic3 from "../image/cafe/thepicker/image3.jpg";
 import '../index.css' 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons"

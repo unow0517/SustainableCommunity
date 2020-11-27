@@ -1,7 +1,7 @@
 import React from 'react';
-import title from "../image/bottlefactory/bottlefactorytitle.jpg";
-import pic1 from "../image/bottlefactory/image1.jpg";
-import pic2 from "../image/bottlefactory/image2.jpg";
+import title from "../image/cafe/bottlefactory/bottlefactorytitle.jpg";
+import pic1 from "../image/cafe/bottlefactory/image1.jpg";
+import pic2 from "../image/cafe/bottlefactory/image2.jpg";
 import '../index.css' 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons"

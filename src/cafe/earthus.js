@@ -1,6 +1,6 @@
 import React from 'react';
-import pic1 from "../image/earthus/earthustakeout.jpg";
-import title from "../image/earthus/earthustitle.jpg";
+import pic1 from "../image/cafe/earthus/earthustakeout.jpg";
+import title from "../image/cafe/earthus/earthustitle.jpg";
 import '../index.css' 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons"

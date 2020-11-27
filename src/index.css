@@ -89,8 +89,9 @@ body{
     padding: 0 var(--large-padding);
     
 }
-/*Cafe Inside!*/
-.cafeinside .head{
+
+/*shop*/
+.head{
     margin:auto;
     width:100%;
     display:flex;
@@ -98,31 +99,28 @@ body{
     background-color: var(--lightread);
 }
 
-.cafeinside .title {
+.title {
     height:200px;
 }
 
-.cafeinside .head .icons{
+.head .icons{
     margin-right: 0;
     font-size: 25px;
     padding: 30px;
 }
 
-.cafeinside .head .icon{
+.head .icon{
     margin-right: 0;
     font-size: 25px;
     padding: 30px;
 }
 
-.cafeinside .picture {
+.picture {
     height: 500px;
     margin-right: 5px;
 }
 
-
-
-
-.thepicker .icon:hover{
+.icon:hover{
     background-color: yellowgreen;
 }
 /*

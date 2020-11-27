@@ -3,9 +3,9 @@ import {Link,Switch, Route} from 'react-router-dom';
 import ThePicker from '../cafe/thepicker';
 import BottleFactory from '../cafe/bottlefactory';
 import EarthUs from '../cafe/earthus';
-import thepicker from '../image/thepicker/thepickertitle.png'
-import bottlefactory from '../image/bottlefactory/bottlefactorytitle.jpg'
-import earthus from '../image/earthus/earthustitle.jpg'
+import thepicker from '../image/cafe/thepicker/thepickertitle.png'
+import bottlefactory from '../image/cafe/bottlefactory/bottlefactorytitle.jpg'
+import earthus from '../image/cafe/earthus/earthustitle.jpg'
 
 const cafeObject ={
   list: [
