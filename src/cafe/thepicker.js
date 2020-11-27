@@ -1,26 +1,32 @@
 import React from 'react';
-import title from "./image/thepicker/thepickertitle.png";
-import pic1 from "./image/thepicker/image1.jpg";
-import pic2 from "./image/thepicker/image2.jpg";
-import pic3 from "./image/thepicker/image3.jpg";
-import '../../index.css' 
+import title from "../image/cafe/thepicker/thepickertitle.png";
+import pic1 from "../image/cafe/thepicker/image1.jpg";
+import pic2 from "../image/cafe/thepicker/image2.jpg";
+import pic3 from "../image/cafe/thepicker/image3.jpg";
+import '../index.css' 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons"
 import {faHome} from "@fortawesome/free-solid-svg-icons"
 
 const ThePicker = () => {
     return(
-        <div className='thepicker'>
-            <div className='head'>
+        <div className='cafeinside'>
+            <section className='head'>
                 <img src={title} alt='thepickermain' className='title'/>
-                <div className='icons'>
+                <section className='icons'>
                     <a href='https://thepicker.net/' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faHome} className='icon'/></a>
                     <a href='https://www.instagram.com/thepicker/?hl=ko' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faInstagram} className='icon'/></a>
-                </div>
-            </div>
-                    
+                </section>
+            </section>
+            <section className='comment'>
+                    <form>
+                        <input type='text' maxLength='500' placeholder='leave Comments'/>
+                        <input type='submit'/>
+                    </form>
+            </section>
+            <section>
                 <i className='address'>주소: 서울시 성동구 왕십리로 115, 헤이그라운드 9층</i><br/><br/>
                 <h2>ZERO WASTE LIFESTYLE STORE IN KOREA</h2><br/><br/>
                 <p><strong>더 피커는 국내최초 제로웨이스트 플랫폼</strong>으로, 
@@ -32,13 +38,15 @@ const ThePicker = () => {
                     국내 제로 웨이스트 1호 매장 '더피커' 대표 인터뷰 [우리의 환경은 평등합니까]_세계일보</a></p>
                 <p><a href='https://brunch.co.kr/@thefirstmedia/110' target="_blank" rel = 'noreferrer'> 더 피커,
                     쓰레기는 두고 가세요_브런치</a></p>
-                <p><a href='https://www.youtube.com/watch?v=QHw9JDS8iS4' target="_blank" rel = 'noreferrer'> [안쓰고 산다] 
-                    포장이 없는 잡화점, '제로웨이스트숍 더피커' 편. 환경부 유튜브</a></p><br/><br/>  
-            <div>
+                <p><a href='https://www.youtube.com/watch?v=QHw9JDS8iS4' target="_blank" rel = 'noreferrer'> 
+                [안쓰고 산다] 포장이 없는 잡화점, '제로웨이스트숍 더피커' 편. 환경부 유튜브</a></p><br/><br/>
+            </section>     
+            <section>
                 <img src={pic1} alt='image1' className = 'picture'/>
                 <img src={pic2} alt='image2' className = 'picture'/>
                 <img src={pic3} alt='image3' className = 'picture'/>
-            </div>
+            </section>
+
         </div>
     );
 };
