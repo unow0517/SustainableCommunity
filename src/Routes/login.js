@@ -1,5 +1,6 @@
 import { authService } from 'fBase';
 import React,{useState} from 'react';
+import Popup from 'reactjs-popup'
 
 const LogIn = () =>{
     const [email, setEmail] = useState("");
@@ -44,6 +45,27 @@ const LogIn = () =>{
             <div>
                 Continue with Facebook
             </div>
+            <Popup
+                trigger={<button className="button"> Sign Up</button>}
+                modal
+                nested
+            >
+            {close => (
+                <div className="modal">
+                <button className="close" onClick={close}>
+                    &times;close
+                </button>
+                <div className="header"> Sign Up </div>
+                <div className="content">
+                    Email: <input type='email' required/><br/>
+                    Password:<input type='password' required/>
+                </div>
+                <div className="actions">                    
+                    <button>Submit</button>
+                </div>
+                </div>
+            )}
+            </Popup>
         </div>
     )
 }
