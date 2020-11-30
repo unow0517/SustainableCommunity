@@ -18,7 +18,7 @@ const FullOthers = () => {
     <div>
       <ul className='fullcafe'>
         {othersObject.all().map(c=>(
-          <li>
+          <li key={c.name}>
            <Link to = {`/others/${c.name}`}><img src={c.image} className = 'icon' alt='cafeimage'/></Link>
           </li>
         ))}

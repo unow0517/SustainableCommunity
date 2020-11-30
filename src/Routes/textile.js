@@ -16,7 +16,7 @@ const FullTextile = () => {
     <div>
       <ul className='fullcafe'>
         {textileObject.all().map(c=>(
-          <li>
+          <li key={c.name}>
            <Link to = {`/textile/${c.name}`}><img src={c.image} className = 'icon' alt='cafeimage'/></Link>
           </li>
         ))}

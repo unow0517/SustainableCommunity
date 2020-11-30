@@ -22,7 +22,7 @@ const FullCafe = () => {
     <div>
       <ul className='fullcafe'>
         {cafeObject.all().map(c=>(
-          <li>
+          <li key={c.name}>
            <Link to = {`/cafe/${c.name}`}><img src={c.image} className = 'icon' alt='cafeimage'/></Link>
           </li>
         ))}

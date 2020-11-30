@@ -4,7 +4,6 @@ import title from "../image/cafe/earthus/earthustitle.jpg";
 import '../index.css' 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons"
-import {faHome} from "@fortawesome/free-solid-svg-icons"
 
 
 const EarthUs = () => {
