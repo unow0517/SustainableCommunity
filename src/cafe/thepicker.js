@@ -9,11 +9,11 @@ import {faInstagram} from "@fortawesome/free-brands-svg-icons"
 import {faHome} from "@fortawesome/free-solid-svg-icons"
 import Comment from 'comments/comment';
 
-const ThePicker = () => {
+const ThePicker = ({USERID,ISLOGGEDIN}) => {
     return(
-        <div className='cafeinside'>
+        <div className='shopinside'>
             <section className='head'>
-                <img src={title} alt='thepickermain' className='title'/>
+                <img src={title} alt='thepickermain' className='shoptitle'/>
                 <section className='icons'>
                     <a href='https://thepicker.net/' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faHome} className='icon'/></a>
@@ -41,7 +41,7 @@ const ThePicker = () => {
                 <img src={pic2} alt='image2' className = 'picture'/>
                 <img src={pic3} alt='image3' className = 'picture'/>
             </section>
-            <Comment/>
+            <Comment USERID={USERID} ISLOGGEDIN={ISLOGGEDIN}/>
         </div>
     );
 };

@@ -16,7 +16,7 @@ const othersObject ={
 const FullOthers = () => {
   return (
     <div>
-      <ul className='fullcafe'>
+      <ul className='homebody'>
         {othersObject.all().map(c=>(
           <li key={c.name}>
            <Link to = {`/others/${c.name}`}><img src={c.image} className = 'icon' alt='cafeimage'/></Link>
@@ -44,9 +44,9 @@ const Others = (props) => {
 const OthersHome = () => {
   var currentLocation =window.location.pathname;
   return (
-    <div className ="cafehome">
+    <div>
       <div className='location'>{currentLocation}</div>
-      <Switch>
+      <Switch className ="homebody">
         <Route exact path='/others' component={FullOthers}/>
         <Route path='/others/:name' component={Others}/>
       </Switch>

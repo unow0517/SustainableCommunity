@@ -10,9 +10,9 @@ import '../index.css';
 
 const GreenBliss = () => {
     return (
-        <div>
+        <div className = 'shopinside'>
             <section className='head'>
-                <img src={title} alt='thepickermain' className='title'/>
+                <img src={title} alt='thepickermain' className='shoptitle'/>
                 <section className='icons'>
                     <a href='http://greenbliss.co.kr/' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faHome} className='icon'/></a>

@@ -6,9 +6,9 @@ import jigu from '../image/dailygoods/jigu/jigutitle.png'
 
 const Jigu = () => {
     return (
-        <div>
+        <div className='cafeinside'>
             <section className='head'>
-                <img src={jigu} alt='jigumain' className='title'/>
+                <img src={jigu} alt='jigumain' className='shoptitle'/>
                 <section className='icons'>
                     <a href='https://smartstore.naver.com/peaceontable' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faHome} className='icon'/></a>
