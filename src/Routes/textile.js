@@ -14,9 +14,9 @@ const textileObject ={
 const FullTextile = () => {
   return (
     <div>
-      <ul className='fullcafe'>
+      <ul className='homebody'>
         {textileObject.all().map(c=>(
-          <li>
+          <li key={c.name}>
            <Link to = {`/textile/${c.name}`}><img src={c.image} className = 'icon' alt='cafeimage'/></Link>
           </li>
         ))}
@@ -40,9 +40,9 @@ const Textile = (props) => {
 const TextileHome = () => {
   var currentLocation =window.location.pathname;
   return (
-    <div className ="cafehome">
+    <div>
       <div className='location'>{currentLocation}</div>
-      <Switch>
+      <Switch className ="homebody">
         <Route exact path='/textile' component={FullTextile}/>
         <Route path='/textile/:name' component={Textile}/>
       </Switch>

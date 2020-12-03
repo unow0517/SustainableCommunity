@@ -4,14 +4,14 @@ import title from "../image/cafe/earthus/earthustitle.jpg";
 import '../index.css' 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons"
-import {faHome} from "@fortawesome/free-solid-svg-icons"
+import Comment from 'comments/comment'
 
 
-const EarthUs = () => {
+const EarthUs = ({USERID,ISLOGGEDIN}) => {
     return(
         <div className='cafeinside'>
             <section className='head'>
-                <img src={title} alt='thepickermain' className='title'/>
+                <img src={title} alt='thepickermain' className='shoptitle'/>
                 <section className='icons'>
                     <a href='https://www.instagram.com/earth__us/?hl=en' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faInstagram} className='icon'/></a>
@@ -38,6 +38,7 @@ const EarthUs = () => {
             <section>
                 <img src={pic1} alt='image1' className = 'picture'/>
             </section>
+            {/* <Comment USERID={USERID} ISLOGGEDIN={ISLOGGEDIN}/> */}
         </div>
     )
 }

@@ -7,24 +7,19 @@ import '../index.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons"
 import {faHome} from "@fortawesome/free-solid-svg-icons"
+import Comment from 'comments/comment';
 
-const ThePicker = () => {
+const ThePicker = ({USERID,ISLOGGEDIN}) => {
     return(
-        <div className='cafeinside'>
+        <div className='shopinside'>
             <section className='head'>
-                <img src={title} alt='thepickermain' className='title'/>
+                <img src={title} alt='thepickermain' className='shoptitle'/>
                 <section className='icons'>
                     <a href='https://thepicker.net/' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faHome} className='icon'/></a>
                     <a href='https://www.instagram.com/thepicker/?hl=ko' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faInstagram} className='icon'/></a>
                 </section>
-            </section>
-            <section className='comment'>
-                    <form>
-                        <input type='text' maxLength='500' placeholder='leave Comments'/>
-                        <input type='submit'/>
-                    </form>
             </section>
             <section>
                 <i className='address'>주소: 서울시 성동구 왕십리로 115, 헤이그라운드 9층</i><br/><br/>
@@ -46,7 +41,7 @@ const ThePicker = () => {
                 <img src={pic2} alt='image2' className = 'picture'/>
                 <img src={pic3} alt='image3' className = 'picture'/>
             </section>
-
+            <Comment USERID={USERID} ISLOGGEDIN={ISLOGGEDIN}/>
         </div>
     );
 };

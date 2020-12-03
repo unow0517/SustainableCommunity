@@ -7,9 +7,9 @@ import {faHome} from "@fortawesome/free-solid-svg-icons"
 
 const Superbin = () => {
     return(
-        <div className='cafeinside'>
+        <div className='shopinside'>
             <section className='head'>
-                <img src={title} alt='Superbinmain' className='title'/>
+                <img src={title} alt='Superbinmain' className='shoptitle'/>
                 <section className='icons'>
                     <a href='http://www.superbin.co.kr/new/index.php' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faHome} className='icon'/></a>

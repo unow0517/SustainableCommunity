@@ -13,9 +13,9 @@ const dailyGoodsObject ={
 const FullDailyGoods = () => {
   return (
     <div>
-      <ul className='fullcafe'>
+      <ul className='homebody'>
         {dailyGoodsObject.all().map(c=>(
-          <li>
+          <li key={c.name}>
            <Link to = {`/dailygoods/${c.name}`}><img src={c.image} className = 'icon' alt='cafeimage'/></Link>
           </li>
         ))}
@@ -38,15 +38,16 @@ const DailyGoods = (props) => {
 
 const DailyGoodsHome = () => {
   var currentLocation =window.location.pathname;
+  console.log(currentLocation);
   return (
-    <div className ="cafehome">
+    <div >
       <div className='location'>{currentLocation}</div>
-      <Switch>
+      <Switch className ="homebody">
         <Route exact path='/dailygoods' component={FullDailyGoods}/>
         <Route path='/dailygoods/:name' component={DailyGoods}/>
       </Switch>
     </div>
   )
-}
+} 
 
 export default DailyGoodsHome;
