@@ -9,7 +9,7 @@ const ZeroDesign = () => {
     return(
         <div className='cafeinside'>
             <section className='head'>
-                <img src={title} alt='thepickermain' className='title'/>
+                <img src={title} alt='thepickermain' className='shoptitle'/>
                 <section className='icons'>
                     <a href='https://thepicker.net/' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faHome} className='icon'/></a>

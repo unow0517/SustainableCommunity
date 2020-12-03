@@ -20,7 +20,7 @@ const cafeObject ={
 const FullCafe = () => {
   return (
     <div>
-      <ul className='fullcafe'>
+      <ul className='homebody'>
         {cafeObject.all().map(c=>(
           <li key={c.name}>
            <Link to = {`/cafe/${c.name}`}><img src={c.image} className = 'icon' alt='cafeimage'/></Link>
@@ -35,7 +35,7 @@ const FullCafe = () => {
 const Cafe = (props) => {
   const urlCafeName=props.match.params.name;
    if(urlCafeName === 'thepicker'){
-    return <div><ThePicker/></div>
+    return <div><ThePicker USERID={props.USERID} ISLOGGEDIN={props.ISLOGGEDIN}/></div>
   } else if(urlCafeName === 'bottlefactory'){
     return <div><BottleFactory/></div>
   } else if(urlCafeName === 'earthus'){
@@ -48,14 +48,20 @@ const Cafe = (props) => {
   
 
 
-const CafeHome = () => {
-  var currentLocation =window.location.pathname;
+const CafeHome = (props) => {
+  var currentLocation =window.location.href;
   return (
-    <div className ="cafehome">
+    <div>
       <div className='location'>{currentLocation}</div>
-      <Switch>
+      <Switch className="homebody">
         <Route exact path='/cafe' component={FullCafe}/>
-        <Route path='/cafe/:name' component={Cafe}/>
+        <Route path='/cafe/:name' render={(matchProps)=>
+          <Cafe
+            {...matchProps}
+            USERID={props.USERID} 
+            ISLOGGEDIN={props.ISLOGGEDIN} 
+          />}
+        />
       </Switch>
     </div>
   )

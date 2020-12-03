@@ -9,9 +9,9 @@ import {faHome} from "@fortawesome/free-solid-svg-icons"
 
 const BottleFactory = () => {
     return(
-        <div className='cafeinside'>
+        <div className='shopinside'>
             <section className='head'>
-                <img src={title} alt='thepickermain' className='title'/>
+                <img src={title} alt='thepickermain' className='shoptitle'/>
                 <section className='icons'>
                     <a href='https://bottlefactory.co.kr/' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faHome} className='icon'/></a>
