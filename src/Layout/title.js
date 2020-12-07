@@ -26,7 +26,7 @@ const Title = (props) =>{
                 <h1 className = 'maintitle'><Link className='link' to='/'>
                     지속가능한 커뮤니티입니다</Link>
                 </h1>                
-                <Link to='/login'><button>
+                <Link to='/login'><button className='button'>
                     Log In
                 </button></Link>
             </div>

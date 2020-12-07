@@ -1,16 +1,16 @@
 import React from 'react';
 import {Link,Switch, Route} from 'react-router-dom';
-import jigu from '../image/dailygoods/jigu/jigutitle.png'
-import Jigu from '../dailygoods/jigu'
+import jiguimage from 'image/dailygoods/jigu/jigutitle.png'
+import Jigu from 'dailygoods/jigu'
 const dailyGoodsObject ={
   list: [
-    { name:'jigu', image: jigu},
+    { name:'jigu', image: jiguimage},
   ],
   all: function(){return this.list},
 }
 
 
-const FullDailyGoods = () => {
+const FullDailyGoods = (props) => {
   return (
     <div>
       <ul className='homebody'>
@@ -26,9 +26,9 @@ const FullDailyGoods = () => {
 
 
 const DailyGoods = (props) => {
-  const urlName=props.match.params.name;
-   if(urlName === 'jigu'){
-    return <div><Jigu/></div>
+  const URL=props.location.pathname;
+   if(URL === '/dailygoods/jigu'){
+    return <div><Jigu {...props}/></div>
   } 
     return <div>Sorry, that's not here yet</div>
 }
@@ -36,15 +36,18 @@ const DailyGoods = (props) => {
   
 
 
-const DailyGoodsHome = () => {
-  var currentLocation =window.location.pathname;
-  console.log(currentLocation);
+const DailyGoodsHome = (props) => {
+  var currentLocation = props.location.pathname;
   return (
     <div >
       <div className='location'>{currentLocation}</div>
       <Switch className ="homebody">
-        <Route exact path='/dailygoods' component={FullDailyGoods}/>
-        <Route path='/dailygoods/:name' component={DailyGoods}/>
+        <Route exact path='/dailygoods' render={
+          () => <FullDailyGoods {...props}/>}
+        />
+        <Route path='/dailygoods/:name' render={
+          () => <DailyGoods {...props}/>}
+        />
       </Switch>
     </div>
   )

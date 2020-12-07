@@ -33,13 +33,13 @@ const FullCafe = () => {
 
 
 const Cafe = (props) => {
-  const urlCafeName=props.match.params.name;
-   if(urlCafeName === 'thepicker'){
-    return <div><ThePicker USERID={props.USERID} ISLOGGEDIN={props.ISLOGGEDIN}/></div>
-  } else if(urlCafeName === 'bottlefactory'){
-    return <div><BottleFactory/></div>
-  } else if(urlCafeName === 'earthus'){
-    return <div><EarthUs/></div>
+  const urlCafeName=props.location.pathname;
+   if(urlCafeName === '/cafe/thepicker'){
+    return <div><ThePicker {...props}/></div>
+  } else if(urlCafeName === '/cafe/bottlefactory'){
+    return <div><BottleFactory {...props}/></div>
+  } else if(urlCafeName === '/cafe/earthus'){
+    return <div><EarthUs {...props}/></div>
   } else {  
     return <div>Sorry, that's not here yet</div>
   }
@@ -49,18 +49,14 @@ const Cafe = (props) => {
 
 
 const CafeHome = (props) => {
-  var currentLocation =window.location.href;
+  var currentLocation = props.location.pathname;
   return (
     <div>
       <div className='location'>{currentLocation}</div>
       <Switch className="homebody">
         <Route exact path='/cafe' component={FullCafe}/>
-        <Route path='/cafe/:name' render={(matchProps)=>
-          <Cafe
-            {...matchProps}
-            USERID={props.USERID} 
-            ISLOGGEDIN={props.ISLOGGEDIN} 
-          />}
+        <Route path='/cafe/:name' render={(info)=>
+          <Cafe {...props}/>}
         />
       </Switch>
     </div>

@@ -6,7 +6,7 @@
     --darkblue: #6D929B;
     --ivory: #E8D0A9;
     --grey: #B7AFA3;
-    --white: #F5FAFA;
+    --white:  #f5f5f5af;
     
 
 
@@ -34,15 +34,27 @@
 }
 
 body{
-    background-color: var(--white);
+    background: 
+        linear-gradient(  rgba(4, 31, 12, 0.5), rgba(252, 80, 0, 0.4)), 
+        url('image/bluesnow.png');
 }
 
 .app{
     margin: auto;
     width: 70%;
     text-align: center;
-    background-color:var(--grey);
+    background-color: var(--white);
+    opacity: 90%;
+    min-height: 100vh;
 }
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+    height: 2.5rem;
+}
+
 
 .mainbody .symbol{
     width:150px;
@@ -53,7 +65,6 @@ body{
     padding: var(--large-padding) 0;
     display: flex;
     justify-content: space-between;
-    background-color: var(--lightblue);
 }
 
 .link{
@@ -68,32 +79,52 @@ body{
 .sidebar{
     display:flex;
     flex-direction: column;
-    background: var(--midblue);
-    width: 14.5%;
+    width: 14%;
     position: fixed;
     top: calc(2*var(--medium-margin));
     left: var(--small-margin);
+    background-color: rgba(0, 0, 0, 0.205);
+    font-size: var(--medium-font);
+    z-index: -1;
 }
 
-.sidebar li{
-    padding : var(--medium-padding) var(--large-padding);
+.sidebarmenu{
+    display:block;
+    padding: 40px 0;
 }
 
-.main{
-    margin-left:  140px;
-    background-color:  var(--blue);
+.sidebarmenu:hover:not(.active){
+    background-color: var(--white);
+    opacity: 0.3;
 }
 
 .active{
-    background-color: var(--lightblue);
-    padding: var(--medium-padding);
+    background-color:var(--white);
+    opacity: 0.9;
+}
+
+.maintitlegroup{
+    padding: 40px;
 }
 
 .location{
     text-align: left;
     font-size: var(--small-font);
-    background-color: var(--grey);
     margin: var(--medium-margin) 0 var(--small-margin) var(--small-margin)shoptitle
+}
+
+.button{
+    background-color: rgba(0, 0, 0, 0.377);
+    border:none;
+    padding: 10px;
+    opacity:0.9;
+    border-radius:8px;
+    cursor: pointer;
+    border: 0.5px solid black;
+}
+
+.button:hover{
+    box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.301);
 }
 
 /* Cafe Home */
@@ -113,7 +144,6 @@ body{
 /*shop*/
 .shoptitle {
     height:180px;
-    background-color: var(--grey);
     margin: var(--medium-margin);
 }
 
@@ -125,7 +155,6 @@ body{
     background-color: var(--lightread);
     justify-content: space-between;
 }
-
 
 .head .icons{
     margin-right: 0;
