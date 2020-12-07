@@ -1,10 +1,10 @@
 import React,{useEffect, useState} from 'react';
 import Title from 'Layout/title';
 import Sidebar from 'Layout/sidebar';
-import Cafe from 'Routes/cafe';
-import Dailygoods from 'Routes/dailygoods';
-import Textile from 'Routes/textile';
-import Others from 'Routes/others';
+import CafeHome from 'Routes/CafeHome';
+import DailyGoodsHome from 'Routes/DailyGoodsHome';
+import TextileHome from 'Routes/TextileHome';
+import OthersHome from 'Routes/OthersHome';
 import LogIn from 'Routes/login';
 import {Route, Switch} from 'react-router-dom';
 import Home from 'Routes/home';
@@ -32,18 +32,38 @@ const App = () => {
         USERID={userID} 
         ISLOGGEDIN={isLoggedIn} 
       />
-      <Sidebar/>
-      
-           
+      <Sidebar/>  
       <Switch>
-        <Route path='/cafe'><Cafe USERID={userID} ISLOGGEDIN={isLoggedIn}/></Route>   
-        <Route path='/dailygoods' component={Dailygoods}/>
-        <Route path='/textile' component={Textile}/>
-        <Route path='/others' component={Others}/>
-        <Route path='/login'><LogIn USERID={userID} ISLOGGEDIN={isLoggedIn}/></Route>       
-        <Route path='/'><Home ISLOGGEDIN={isLoggedIn}/></Route>
-      </Switch>
-      <footer>&copy; Sustainable Community {new Date().getFullYear()}</footer>
+        <Route 
+          path='/cafe' 
+          render={(info) =>
+            <CafeHome USERID={userID} ISLOGGEDIN={isLoggedIn} {...info}/>
+          }
+        />
+        <Route 
+          path='/dailygoods' 
+          render={(info) =>
+            <DailyGoodsHome USERID={userID} ISLOGGEDIN={isLoggedIn} {...info}/>
+          }
+        />
+        <Route 
+          path='/textile' 
+          render={(info)=><TextileHome USERID={userID} ISLOGGEDIN={isLoggedIn} {...info}/>}
+        />
+        <Route 
+          path='/others' 
+          render ={(info)=><OthersHome USERID={userID} ISLOGGEDIN={isLoggedIn} {...info}/>}
+        />
+        <Route 
+          path='/login'
+          render={(info)=><LogIn USERID={userID} ISLOGGEDIN={isLoggedIn} {...info}/>}
+        />
+        <Route 
+          path='/'
+          render= {(info)=> <Home USERID={userID} ISLOGGEDIN={isLoggedIn} {...info}/>}
+        />
+    </Switch>
+      <footer className='footer'>&copy; Sustainable Community {new Date().getFullYear()}</footer>
     </div>
   );
 }

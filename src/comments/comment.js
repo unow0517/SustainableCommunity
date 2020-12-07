@@ -1,13 +1,9 @@
 import React,{useEffect, useState} from 'react';
 import { commentService } from 'fBase';
 
-
-// var _path = window.location.pathname
-// console.log(_path)
-var db = commentService.collection(`comments`);
-
-
-const Comment = ({USERID,ISLOGGEDIN}) => {
+const Comment = (props) => {
+    const db = commentService.collection(
+        `comments${props.location.pathname}`);
     const [opinion, setOpinion] = useState("");
     const [lastComments, setLastComments] = useState([]);
     const onChange = (event) => {
@@ -25,7 +21,7 @@ const Comment = ({USERID,ISLOGGEDIN}) => {
         db.add({
             content: opinion,
             createdAt: currentTime,
-            user: USERID
+            user: props.USERID
         });
         setOpinion("");
     }
@@ -40,13 +36,13 @@ const Comment = ({USERID,ISLOGGEDIN}) => {
         });
     },[]);
 
-    if(ISLOGGEDIN){
+    if(props.ISLOGGEDIN){
         return(
             <div className='commentsection'>
                 <ul className='comments'>
                     {lastComments.map((cmts)=>(
                         <li key={cmts.id} className='commentlist'>
-                            <div>{USERID} : {cmts.content}</div>
+                            <div>{cmts.user} : {cmts.content}</div>
                         </li>
                     ))}
                 </ul>
@@ -62,13 +58,13 @@ const Comment = ({USERID,ISLOGGEDIN}) => {
                 </form>
             </div>   
         )   
-    } else if(ISLOGGEDIN===false){
+    } else if(props.ISLOGGEDIN===false){
         return(
             <div className='commentsection'>
                 <ul className='comments'>
                     {lastComments.map((cmts)=>(
                         <li key={cmts.id} className='commentlist'>
-                            <div>{USERID} : {cmts.content}</div>                 
+                            <div>{cmts.user} : {cmts.content}</div>                 
                         </li>
                     ))}
                 </ul>

@@ -27,9 +27,9 @@ const FullTextile = () => {
 
 
 const Textile = (props) => {
-  const urlName=props.match.params.name;
-   if(urlName === 'greenbliss'){
-    return <div><GreenBliss/></div>
+  const urlName=props.location.pathname;
+   if(urlName === '/textile/greenbliss'){
+    return <div><GreenBliss {...props}/></div>
   } 
     return <div>Sorry, that's not here yet</div>
 }
@@ -37,14 +37,21 @@ const Textile = (props) => {
   
 
 
-const TextileHome = () => {
+const TextileHome = (props) => {
+
   var currentLocation =window.location.pathname;
   return (
     <div>
       <div className='location'>{currentLocation}</div>
       <Switch className ="homebody">
-        <Route exact path='/textile' component={FullTextile}/>
-        <Route path='/textile/:name' component={Textile}/>
+        <Route 
+          exact path='/textile' 
+          render={()=> <FullTextile {...props}/>}
+        />
+        <Route 
+          path='/textile/:name' 
+          render={()=><Textile {...props}/>}
+        />
       </Switch>
     </div>
   )

@@ -7,8 +7,9 @@ import greenblissbear from '../image/textile/greenbliss/greenblissbear.jpg';
 import greenblissmask from '../image/textile/greenbliss/greenblissmask.jpg';
 import greenblisssocks from '../image/textile/greenbliss/greenblisssocks.jpg';
 import '../index.css';
+import Comment from 'comments/comment'
 
-const GreenBliss = () => {
+const GreenBliss = (props) => {
     return (
         <div className = 'shopinside'>
             <section className='head'>
@@ -19,12 +20,6 @@ const GreenBliss = () => {
                     <a href='https://www.instagram.com/greenbliss7/' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faInstagram} className='icon'/></a>
                 </section>
-            </section>
-            <section className='comment'>
-                    <form>
-                        <input type='text' maxLength='500' placeholder='leave Comments'/>
-                        <input type='submit'/>
-                    </form>
             </section>
             <section>
                 <i className='address'>주소: 서울시 강남구 신사동 545-18 가로골목 3층</i><br/><br/>
@@ -44,9 +39,7 @@ const GreenBliss = () => {
                 <img src={greenblisssocks} alt="그린블리스 양말" className='picture'/>
                 <img src={greenblissmask} alt='그린블리스 마스크' className='picture'/>
             </section>
-        
-
-       
+            <Comment {...props}/>
         <i></i>
         <br/>
         <br/>

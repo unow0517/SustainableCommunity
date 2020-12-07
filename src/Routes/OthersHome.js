@@ -27,28 +27,31 @@ const FullOthers = () => {
   );
 }
 
-
 const Others = (props) => {
-  const urlName=props.match.params.name;
-   if(urlName === 'superbin'){
-    return <div><Superbin/></div>
-  } else if(urlName === '000gan'){
-    return <div><ZeroDesign/></div>
+  console.log(props)
+  const urlName=props.location.pathname;
+   if(urlName === '/others/superbin'){
+    return <div><Superbin {...props}/></div>
+  } else if(urlName === '/others/000gan'){
+    return <div><ZeroDesign {...props}/></div>
   } 
     return <div>Sorry, that's not here yet</div>
 }
- 
-  
 
-
-const OthersHome = () => {
+const OthersHome = (props) => {
   var currentLocation =window.location.pathname;
   return (
     <div>
       <div className='location'>{currentLocation}</div>
       <Switch className ="homebody">
-        <Route exact path='/others' component={FullOthers}/>
-        <Route path='/others/:name' component={Others}/>
+        <Route 
+          exact path='/others' 
+          render={()=> <FullOthers {...props}/>}
+        />
+        <Route 
+          path='/others/:name' 
+          render={()=> <Others {...props}/>}
+        />
       </Switch>
     </div>
   )

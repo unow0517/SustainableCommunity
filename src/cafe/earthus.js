@@ -7,7 +7,7 @@ import {faInstagram} from "@fortawesome/free-brands-svg-icons"
 import Comment from 'comments/comment'
 
 
-const EarthUs = ({USERID,ISLOGGEDIN}) => {
+const EarthUs = (props) => {
     return(
         <div className='cafeinside'>
             <section className='head'>
@@ -16,12 +16,6 @@ const EarthUs = ({USERID,ISLOGGEDIN}) => {
                     <a href='https://www.instagram.com/earth__us/?hl=en' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faInstagram} className='icon'/></a>
                 </section>
-            </section>
-            <section className='comment'>
-                    <form>
-                        <input type='text' maxLength='500' placeholder='leave Comments'/>
-                        <input type='submit'/>
-                    </form>
             </section>
             <section>
                 <i className='address'>주소: 서울특별시 마포구 성미산로 150(지번) 서울특별시 마포구 연남동 239-49</i><br/><br/>
@@ -38,7 +32,7 @@ const EarthUs = ({USERID,ISLOGGEDIN}) => {
             <section>
                 <img src={pic1} alt='image1' className = 'picture'/>
             </section>
-            {/* <Comment USERID={USERID} ISLOGGEDIN={ISLOGGEDIN}/> */}
+            <Comment {...props}/>
         </div>
     )
 }

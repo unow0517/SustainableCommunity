@@ -9,7 +9,7 @@ import {faInstagram} from "@fortawesome/free-brands-svg-icons"
 import {faHome} from "@fortawesome/free-solid-svg-icons"
 import Comment from 'comments/comment';
 
-const ThePicker = ({USERID,ISLOGGEDIN}) => {
+const ThePicker = (props) => {
     return(
         <div className='shopinside'>
             <section className='head'>
@@ -41,7 +41,7 @@ const ThePicker = ({USERID,ISLOGGEDIN}) => {
                 <img src={pic2} alt='image2' className = 'picture'/>
                 <img src={pic3} alt='image3' className = 'picture'/>
             </section>
-            <Comment USERID={USERID} ISLOGGEDIN={ISLOGGEDIN}/>
+            <Comment {...props}/>
         </div>
     );
 };

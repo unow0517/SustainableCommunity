@@ -6,8 +6,9 @@ import '../index.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faInstagram} from "@fortawesome/free-brands-svg-icons"
 import {faHome} from "@fortawesome/free-solid-svg-icons"
+import Comment from 'comments/comment'
 
-const BottleFactory = () => {
+const BottleFactory = (props) => {
     return(
         <div className='shopinside'>
             <section className='head'>
@@ -18,12 +19,6 @@ const BottleFactory = () => {
                     <a href='https://www.instagram.com/bottle_factory/?hl=ko' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={faInstagram} className='icon'/></a>
                 </section>
-            </section>
-            <section className='comment'>
-                    <form>
-                        <input type='text' maxLength='500' placeholder='leave Comments'/>
-                        <input type='submit'/>
-                    </form>
             </section>
             <section>
                 <i className='address'>주소: 서울특별시 서대문구 연희동 708번지 1층</i><br/><br/>
@@ -51,6 +46,7 @@ const BottleFactory = () => {
                 <img src={pic1} alt='image1' className = 'picture'/>
                 <img src={pic2} alt='image2' className = 'picture'/>
             </section>
+            <Comment {...props}/>
         </div>
     );
 };
