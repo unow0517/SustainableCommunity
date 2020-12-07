@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/SustainableCommunity/static/css/main.d5c927d3.chunk.css",
+    "main.css": "/SustainableCommunity/static/css/main.40164fad.chunk.css",
     "main.js": "/SustainableCommunity/static/js/main.27244091.chunk.js",
     "main.js.map": "/SustainableCommunity/static/js/main.27244091.chunk.js.map",
     "runtime-main.js": "/SustainableCommunity/static/js/runtime-main.2d2667dc.js",
@@ -8,7 +8,7 @@
     "static/js/2.2216f7ba.chunk.js": "/SustainableCommunity/static/js/2.2216f7ba.chunk.js",
     "static/js/2.2216f7ba.chunk.js.map": "/SustainableCommunity/static/js/2.2216f7ba.chunk.js.map",
     "index.html": "/SustainableCommunity/index.html",
-    "static/css/main.d5c927d3.chunk.css.map": "/SustainableCommunity/static/css/main.d5c927d3.chunk.css.map",
+    "static/css/main.40164fad.chunk.css.map": "/SustainableCommunity/static/css/main.40164fad.chunk.css.map",
     "static/js/2.2216f7ba.chunk.js.LICENSE.txt": "/SustainableCommunity/static/js/2.2216f7ba.chunk.js.LICENSE.txt",
     "static/media/earthustakeout.9503e069.jpg": "/SustainableCommunity/static/media/earthustakeout.9503e069.jpg",
     "static/media/greenblissbear.cb8f2325.jpg": "/SustainableCommunity/static/media/greenblissbear.cb8f2325.jpg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.2d2667dc.js",
     "static/js/2.2216f7ba.chunk.js",
-    "static/css/main.d5c927d3.chunk.css",
+    "static/css/main.40164fad.chunk.css",
     "static/js/main.27244091.chunk.js"
   ]
 }
