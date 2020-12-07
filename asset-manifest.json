@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/SustainableCommunity/static/css/main.d5c927d3.chunk.css",
+    "main.js": "/SustainableCommunity/static/js/main.27244091.chunk.js",
+    "main.js.map": "/SustainableCommunity/static/js/main.27244091.chunk.js.map",
+    "runtime-main.js": "/SustainableCommunity/static/js/runtime-main.2d2667dc.js",
+    "runtime-main.js.map": "/SustainableCommunity/static/js/runtime-main.2d2667dc.js.map",
+    "static/js/2.2216f7ba.chunk.js": "/SustainableCommunity/static/js/2.2216f7ba.chunk.js",
+    "static/js/2.2216f7ba.chunk.js.map": "/SustainableCommunity/static/js/2.2216f7ba.chunk.js.map",
+    "index.html": "/SustainableCommunity/index.html",
+    "static/css/main.d5c927d3.chunk.css.map": "/SustainableCommunity/static/css/main.d5c927d3.chunk.css.map",
+    "static/js/2.2216f7ba.chunk.js.LICENSE.txt": "/SustainableCommunity/static/js/2.2216f7ba.chunk.js.LICENSE.txt",
+    "static/media/earthustakeout.9503e069.jpg": "/SustainableCommunity/static/media/earthustakeout.9503e069.jpg",
+    "static/media/greenblissbear.cb8f2325.jpg": "/SustainableCommunity/static/media/greenblissbear.cb8f2325.jpg",
+    "static/media/greenblissmask.4297994d.jpg": "/SustainableCommunity/static/media/greenblissmask.4297994d.jpg",
+    "static/media/greenblisssocks.64bc3e06.jpg": "/SustainableCommunity/static/media/greenblisssocks.64bc3e06.jpg",
+    "static/media/image1.3a9be778.jpg": "/SustainableCommunity/static/media/image1.3a9be778.jpg",
+    "static/media/image1.b8af7229.jpg": "/SustainableCommunity/static/media/image1.b8af7229.jpg",
+    "static/media/image2.9964ede4.jpg": "/SustainableCommunity/static/media/image2.9964ede4.jpg",
+    "static/media/image2.f87d3b4c.jpg": "/SustainableCommunity/static/media/image2.f87d3b4c.jpg",
+    "static/media/image3.be714b6c.jpg": "/SustainableCommunity/static/media/image3.be714b6c.jpg",
+    "static/media/jigutitle.daa4e2ef.png": "/SustainableCommunity/static/media/jigutitle.daa4e2ef.png",
+    "static/media/thepickertitle.a69a06cb.png": "/SustainableCommunity/static/media/thepickertitle.a69a06cb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d2667dc.js",
+    "static/js/2.2216f7ba.chunk.js",
+    "static/css/main.d5c927d3.chunk.css",
+    "static/js/main.27244091.chunk.js"
+  ]
+}
